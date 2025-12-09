@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vue.js Basics</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <span>{{emoji}}</span>
+            <h1>{{status_code}}</h1>
+        </header>
+        <p>{{status_message}}</p>
+        <a href="https://scrimba.com" target="_blank">{{button_text}} 👉🏻 </a>
+    </div>
+    <script>
+        const { createApp, ref} = Vue;
+        createApp({
+            setup(){
+                const emoji = ref("🙀");
+                const status_code = ref("500");
+                const status_message = ref("SERVER is sleeping.");
+                const button_text = ref("Bye!");
+                return { emoji, status_code, status_message, button_text}
+            }
+        }).mount('#app');
+    </script> 
+</body>
+</html> 
