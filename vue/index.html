@@ -14,6 +14,7 @@
             <h1>{{status_code}}</h1>
         </header>
         <p>{{status_message}}</p>
+        <p>{{error_message}}</p>
         <a href="https://scrimba.com" target="_blank">{{button_text}} 👉🏻 </a>
     </div>
     <script>
@@ -24,6 +25,7 @@
                 const status_code = ref("500");
                 const status_message = ref("SERVER is sleeping.");
                 const button_text = ref("Bye!");
+                const error_message = ref("Don't worry every little things gonna be all right!");
                 return { emoji, status_code, status_message, button_text}
             }
         }).mount('#app');
